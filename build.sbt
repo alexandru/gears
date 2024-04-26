@@ -18,14 +18,11 @@ lazy val root =
     .jvmSettings(
       Seq(
         javaOptions += "--version 21",
-        libraryDependencies += "org.scalameta" %% "munit" % "1.0.0-M10" % Test
+        libraryDependencies += "org.scalameta" %% "munit" % "1.0.0-RC1" % Test
       )
     )
     .nativeSettings(
       Seq(
-        nativeConfig ~= { c =>
-          c.withMultithreadingSupport(true)
-        },
-        libraryDependencies += "org.scalameta" %%% "munit" % "1.0.0-M10+17-0ca7e7e9-SNAPSHOT" % Test
+        libraryDependencies += "org.scalameta" %%% "munit" % "1.0.0-RC1" % Test
       )
     )
